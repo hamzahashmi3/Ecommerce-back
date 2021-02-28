@@ -40,15 +40,15 @@ const braintreeRoutes = require('./routes/braintree');
 const orderRoutes = require('./routes/order');
 
 // routes middleware
-app.use('/', authRoutes);
-app.use('/', userRoutes);
-app.use('/', categoryRoutes);
-app.use('/', productRoutes);
-app.use('/', braintreeRoutes);
-app.use('/', orderRoutes);
+app.use('/api', authRoutes);
+app.use('/api', userRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', productRoutes);
+app.use('/api', braintreeRoutes);
+app.use('/api', orderRoutes);
 
 
-app.get('/', (req, res)=>{
+app.get('/api', (req, res)=>{
     res.send("connected to node.")
 })
 
